@@ -157,6 +157,10 @@
             user-select: none;
             cursor: pointer;
          }
+
+         .buta {
+            color: rgb(37, 197, 37);
+         }
         
     </style>
 </head>
@@ -181,30 +185,47 @@
    <div class="conta">
       <div class="cla">
          <div class="gente">
-            <p>Rent Pay!</p> <div class="butoes"><span class="cke material-symbols-outlined">
-               check
-               </span> <span style="color: rgb(37, 197, 37);">EDIT </span> <span class="fechar material-symbols-outlined">
-                  close
-                  </span></div>
+            <p>Rent Pay!</p> <div class="butoes"></div>
          </div>
-         <div class="gente">
-            <p>Rent Pay!</p> <div class="butoes"><span class="cke material-symbols-outlined">
-               check
-               </span> <span style="color: rgb(37, 197, 37);">EDIT </span> <span class="fechar material-symbols-outlined">
-                  close
-                  </span></div>
-         </div>
+         
       </div>
    </div>
 </body>
 
 <script>
-   var btn = document.querySelector('.btn')
-   var input = document.querySelector('.btn')
+   var spanCheck = document.createElement('span') ; spanCheck.setAttribute('class', "cke material-symbols-outlined" )
+   spanCheck.innerText = 'check';
+   console.log(spanCheck)
 
+   var edit = document.createElement('span') ; 
+   edit.setAttribute('class', "buta" )
+   edit.innerText = 'EDIT';
+   console.log(edit)
+
+   var spanCheck2 = document.createElement('span') ; spanCheck2.setAttribute('class', "fechar material-symbols-outlined" )
+   spanCheck2.innerText = 'close';
+   console.log(spanCheck2)
+
+
+   var btn = document.querySelector('.gente')
+   btn.
+   btn.append(spanCheck)
+   btn.append(spanCheck2)
+   btn.append(edit)
+   
+   var input = document.querySelector('.add')
+   var divB = document.querySelector('.cla')
+   console.log(input.value.length)
    btn.addEventListener('click', ()=> {
         
-      if() 
+      if(!input.checkValidity()) {
+         input.reportValidity()
+      }
+
+      else {
+         texto = input.value
+         
+      }
 
 
    }
