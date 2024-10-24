@@ -135,10 +135,27 @@
             gap: 20px  
          }
 
+
          p {
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
+         }
+         .cke {
+            color: #0683EF; font-size: 18pt;
+         }
+         .fechar {
+            color: #e82a2a; font-size: 18pt;
+         }
+         .h1 {
+            margin-top: 20px;
+            
+            margin-bottom: 20px;
+         }
+
+         .butoes:hover {
+            user-select: none;
+            cursor: pointer;
          }
         
     </style>
@@ -147,10 +164,11 @@
    
     <div class="hed">
         <h1>TODO LIST</h1>
+       
         
         <div class="qq">
-            <input class="add" type="text" name="" id="" placeholder="Write your todo list here...">
-            <input type="button" value="ADD" class="btn">
+            <input class="add" type="text" name="" id="" required minlength="3" placeholder="Write your todo list here...">
+            <input type="submit" value="ADD" class="btn">
         </div>
 
         
@@ -158,25 +176,39 @@
     </div>
 
     <div>
-      <h1 style="color: black; text-align: center;">List Of Todo Works</h1>
+      <h1 class="h1" style="color: black; text-align: center;">List Of Todo Works</h1>
     </div>
    <div class="conta">
       <div class="cla">
          <div class="gente">
-            <p>Rent Pay!</p> <div class="butoes"><span class="material-symbols-outlined">
+            <p>Rent Pay!</p> <div class="butoes"><span class="cke material-symbols-outlined">
                check
-               </span> <span style="color: rgb(37, 197, 37);">EDIT </span> <span class="material-symbols-outlined">
+               </span> <span style="color: rgb(37, 197, 37);">EDIT </span> <span class="fechar material-symbols-outlined">
                   close
                   </span></div>
          </div>
          <div class="gente">
-            <p>Rent Pay!</p> <div class="butoes"><span class="material-symbols-outlined">
+            <p>Rent Pay!</p> <div class="butoes"><span class="cke material-symbols-outlined">
                check
-               </span> <span style="color: rgb(37, 197, 37);">EDIT </span> <span class="material-symbols-outlined">
+               </span> <span style="color: rgb(37, 197, 37);">EDIT </span> <span class="fechar material-symbols-outlined">
                   close
                   </span></div>
          </div>
       </div>
    </div>
 </body>
+
+<script>
+   var btn = document.querySelector('.btn')
+   var input = document.querySelector('.btn')
+
+   btn.addEventListener('click', ()=> {
+        
+      if() 
+
+
+   }
+   
+   )
+</script>
 </html>
